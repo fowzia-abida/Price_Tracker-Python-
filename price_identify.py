@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+import time
 
 URL = 'https://www.amazon.de/-/en/Digital-Megapixel-Display-Viewfinder-SEL-2870/dp/B00FWUDEEC/ref=sr_1_4?dchild=1&keywords=sony+a7&qid=1620664062&s=ce-de&sr=1-4'
 
@@ -53,7 +54,9 @@ def send_mail():
     
     server.quit()
 
+while(True):
 
-check_price()
+    check_price()
+    time.sleep(60 * 60)
   
     
